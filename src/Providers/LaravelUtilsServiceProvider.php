@@ -27,7 +27,7 @@ class LaravelUtilsServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../../config/utils.php', 'utils');
 
         // Register singletons
-        $this->app->singleton('pipeline', function () {
+        $this->app->singleton('marufnwu.utils.pipeline', function () {
             return new Pipeline;
         });
 

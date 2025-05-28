@@ -24,6 +24,6 @@ class Pipeline extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'pipeline';
+        return 'marufnwu.utils.pipeline';
     }
 }
