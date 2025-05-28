@@ -1,0 +1,80 @@
+{
+    "name": "marufnwu/laravel-utils",
+    "description": "Reusable Laravel utilities including response pipeline, helpers, and common functionality",
+    "keywords": [
+        "laravel",
+        "pipeline",
+        "utilities",
+        "helpers",
+        "response",
+        "maruf"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Maruf Ahmed",
+            "email": "dev.maruf@gmail.com",
+            "homepage": "https://github.com/marufnwu",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/marufnwu/laravel-utils",
+    "support": {
+        "issues": "https://github.com/marufnwu/laravel-utils/issues",
+        "source": "https://github.com/marufnwu/laravel-utils",
+        "docs": "https://github.com/marufnwu/laravel-utils/blob/main/README.md"
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/database": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/view": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/console": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.5|^10.0",
+        "mockery/mockery": "^1.4",
+        "phpstan/phpstan": "^1.10",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marufnwu\\Utils\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marufnwu\\Utils\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marufnwu\\Utils\\Providers\\LaravelUtilsServiceProvider"
+            ],
+            "aliases": {
+                "Pipeline": "Marufnwu\\Utils\\Facades\\Pipeline",
+                "ArrayHelper": "Marufnwu\\Utils\\Facades\\ArrayHelper",
+                "StringHelper": "Marufnwu\\Utils\\Facades\\StringHelper"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
